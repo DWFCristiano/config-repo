@@ -15,7 +15,7 @@ eureka:
    securePort: ${server.port}
    securePortEnabled: true
    nonSecurePortEnabled: false
-   preferIpAddress: true
+#   preferIpAddress: true
      
 zuul:
   sensitiveHeaders: Cookie,Set-Cookie
