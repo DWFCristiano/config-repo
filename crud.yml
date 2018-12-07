@@ -1,5 +1,10 @@
 server:
   port: ${PORT:8082}
+  ssl:
+    enabled: true
+    key-store: src/main/resources/keystore.p12
+    key-store-password: 123456
+    key-alias: eureka-server
 
 spring:
   output:
