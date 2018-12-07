@@ -1,10 +1,29 @@
 server:
   port: ${PORT:8082}
 
+spring:
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    url: jdbc:postgresql://localhost:5432/middleware
+    username: postgres
+    password: dwf@sistemas
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eurekaUser:eurekaPassword@localhost:8761/eureka}
+      defaultZone: ${EUREKA_URI:https://eurekaUser:eurekaPassword@localhost:8761/eureka}
   instance:
     preferIpAddress: true
 
@@ -25,6 +44,11 @@ security:
 ---
 spring:
   profiles: docker
+  datasource:
+    url: jdbc:postgresql://middleware.ceoiszqo5pi6.us-east-1.rds.amazonaws.com:5432/middleware
+    username: postgres
+    password: dwfsistemas
+    driver-class-name: org.postgresql.Driver
 
 security:
   basic:
