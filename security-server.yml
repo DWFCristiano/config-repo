@@ -34,7 +34,7 @@ eureka:
     securePort: ${server.port}
     securePortEnabled: true
     nonSecurePortEnabled: false
-    preferIpAddress: true
+    preferIpAddress: false
 
 management:
   security:
