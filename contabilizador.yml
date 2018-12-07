@@ -39,7 +39,7 @@ security:
   oauth2:
     resource:
       preferTokenInfo: false
-      userInfoUri: http://localhost:9999/users/current
+      userInfoUri: https://localhost:9999/users/current
 
 ---
 spring:
