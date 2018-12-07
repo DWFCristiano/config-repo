@@ -13,27 +13,21 @@ zuul:
   routes:
     crud:
       path: /crud/**
-#      url: http://localhost:8082
       serviceId: crud
     compactador:
       path: /compactador/**
-#      url: http://localhost:8083
       serviceId: compactador
     contabilizador:
       path: /contabilizador/**
-#      url: http://localhost:8090
       serviceId: contabilizador
     server:
       path: /server/**
-#      url: http://localhost:8081
       serviceId: server
     admin:
       path: /admin/**
-#      url: http://localhost:8084
       serviceId: admin
     security-server:
       path: /security-server/**
-#      url: http://localhost:9999
       serviceId: security-server
     zuul-server:
       path: /zuul-server/**
@@ -69,34 +63,26 @@ zuul:
     crud:
       path: /crud/**
       url: http://load-balancer-1235268680.us-east-1.elb.amazonaws.com:8082
-#      serviceId: crud
     compactador:
       path: /compactador/**
       url: http://load-balancer-1235268680.us-east-1.elb.amazonaws.com:8083
-#      serviceId: compactador
     contabilizador:
       path: /contabilizador/**
       url: http://load-balancer-1235268680.us-east-1.elb.amazonaws.com:8090
-#      serviceId: contabilizador
     server:
       path: /server/**
       url: http://18.214.233.48:8081
-#      serviceId: server
     admin:
       path: /admin/**
       url: http://load-balancer-1235268680.us-east-1.elb.amazonaws.com:8084
-#      serviceId: admin
     security-server:
       path: /security-server/**
       url: http://load-balancer-1235268680.us-east-1.elb.amazonaws.com:9999
-#      serviceId: security-server
     zuul-server:
       path: /zuul-server/**
       url: http://load-balancer-1235268680.us-east-1.elb.amazonaws.com:8000
-#      serviceId: zuul-server
       stripPrefix: false
     eureka-server:
       path: /eureka-server/**
       url: http://load-balancer-1235268680.us-east-1.elb.amazonaws.com:8761
-#      serviceId: eureka-server
       stripPrefix: false
