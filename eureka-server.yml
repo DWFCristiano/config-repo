@@ -9,10 +9,6 @@ server:
   
 eureka:
   instance:
-    hostname: localhost
-    securePort: ${server.port}
-    securePortEnabled: true
-    nonSecurePortEnabled: false
   client:
     registerWithEureka: false
     fetchRegistry: false
