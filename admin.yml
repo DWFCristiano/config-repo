@@ -1,5 +1,10 @@
 server:
   port: ${PORT:8084}
+  ssl:
+    enabled: true
+    key-store: src/main/resources/keystore.p12
+    key-store-password: 123456
+    key-alias: eureka-server
 
 spring:
   output:
@@ -25,6 +30,10 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URI:https://eurekaUser:eurekaPassword@localhost:8761/eureka}
   instance:
+    hostname: localhost
+    securePort: ${server.port}
+    securePortEnabled: true
+    nonSecurePortEnabled: false
     preferIpAddress: false
 
 management:
