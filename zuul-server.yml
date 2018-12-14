@@ -43,6 +43,9 @@ zuul:
       path: /eureka-server/**
       serviceId: eureka-server
       stripPrefix: false
+    monitor-service:
+      path: /monitor-service/**
+      serviceId: monitor-service
 
 ribbon:
   ConnectTimeout: 3000
