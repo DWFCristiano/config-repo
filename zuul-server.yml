@@ -46,10 +46,27 @@ zuul:
     monitor-service:
       path: /monitor-service/**
       serviceId: monitor-service
+    email-service:
+      path: /email-service/**
+      serviceId: email-service
 
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
+
+
+hystrix:
+  command:
+    email-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+    monitor-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
 
 ---
 spring:
